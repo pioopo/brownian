@@ -14,7 +14,7 @@ public class Gui extends JFrame{
 	public int languageSelection = 0; 
 	JButton startButton, stopButton, resetButton;
 	JMenuBar menuBar; 
-	JTextField smallMass, bigMass, smallRadius, bigRadius, particleNumber; //Change to sliders!!!
+	JSlider smallMass, bigMass, smallRadius, bigRadius, particleNumber; //Change to sliders!!!
 	JLabel smallMassLabel, bigMassLabel, smallRadiusLabel, bigRadiusLabel, particleNumberLabel;
 	JMenu upperMenu, subMenuForColour, subMenuForLanguage;
 	JMenuItem exitButton, saveButton, colourChoose, smallParticlesColour, bigParticleColour, backgroundColour;
@@ -51,11 +51,11 @@ public class Gui extends JFrame{
 		
 		bottomCenterPanel = new JPanel();
 		bottomCenterPanel.setLayout(new GridLayout(5,1));
-		smallMass = new JTextField(10);
-		bigMass = new JTextField(10);
-		smallRadius = new JTextField(10);
-		bigRadius = new JTextField(10);
-		particleNumber = new JTextField(10);
+		smallMass = new JSlider(1, 5, 1); smallMass.setMajorTickSpacing(1); smallMass.setPaintLabels(true);
+		bigMass = new JSlider(100, 500, 100); bigMass.setMajorTickSpacing(100); bigMass.setPaintLabels(true);
+		smallRadius = new JSlider(1, 5, 1); smallRadius.setMajorTickSpacing(1); smallRadius.setPaintLabels(true);
+		bigRadius = new JSlider(10, 50, 10); bigRadius.setMajorTickSpacing(10); bigRadius.setPaintLabels(true);
+		particleNumber = new JSlider(200, 2000, 200);particleNumber.setMajorTickSpacing(400); particleNumber.setPaintLabels(true);
 		bottomCenterPanel.add(smallMass); bottomCenterPanel.add(smallRadius); bottomCenterPanel.add(bigMass);
 		bottomCenterPanel.add(bigRadius); bottomCenterPanel.add(particleNumber);
 		
