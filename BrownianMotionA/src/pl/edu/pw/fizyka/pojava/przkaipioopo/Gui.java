@@ -4,7 +4,12 @@ package pl.edu.pw.fizyka.pojava.przkaipioopo;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import javax.swing.*;
+
+
 
 public class Gui extends JFrame{
 
@@ -132,10 +137,32 @@ public class Gui extends JFrame{
 				c = JColorChooser.showDialog(this, "Choose colour", Color.WHITE);
 				centralPanel.setBackground(c);
 			}
-	}
-	public static void main(String[] args) {
+	}}
+	/*public static void main(String[] args) {
 		Gui gui = new Gui();
+		
+		/*SwingUtilities.invokeLater(new Runnable() {
+
+			public void run() {
+				JFrame f = new JFrame("Balls");
+				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+				AnimationPanel panel = new AnimationPanel();
+				for (int i = 1; i<20 ; i++) panel.addBall();
+				
+				Ball ball = new Ball();
+				
+				f.add(panel);
+				f.setVisible(true);
+				ExecutorService exec = Executors.newFixedThreadPool(2);
+				exec.execute(panel);
+				ball.run();
+				gui.add(f);
+				exec.shutdown();
+				
+			}});
+		
 		gui.setVisible(true);
 	}
 
-}
+}*/
