@@ -2,13 +2,15 @@ package pl.edu.pw.fizyka.pojava.przkaipioopo;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
 public class Ball extends Thread{
 
-	private int x = 10;
-	private int y = 10;
-	private int vX = 1;
-	private int vY = 2;
+	Random randomGenerator = new Random();
+	private int x = randomGenerator.nextInt(100);
+	private int y = randomGenerator.nextInt(100);
+	private int vX = randomGenerator.nextInt(60) + 1;
+	private int vY = randomGenerator.nextInt(60) + 1;
 	private int r = 3;
 	 
 	public int getX(){

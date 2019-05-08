@@ -21,10 +21,10 @@ public class MainClass {
 				AnimationPanel panel = new AnimationPanel();
 				panel.setSize(630, 500);
 				
-				//Nie wiem dlaczego lata tylko jedna kulka !!!
-				for (int i = 1; i<20 ; i++) {
+				
+				for (int i = 1; i<2000 ; i++) {
 					panel.addBall();
-					System.out.println("Dodano kulkie");
+					//System.out.println("Dodano kulkie");
 				
 				}
 				

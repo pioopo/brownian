@@ -42,7 +42,7 @@ public class AnimationPanel extends JPanel implements Runnable{
 		while(1<2){
 			for (Ball pr : balls) {
 				pr.setX(pr.getX()+pr.getVX());
-				if(pr.getX()+pr.getR()>600)
+				if(pr.getX()+pr.getR()>700)
 					pr.setVX(pr.getVX()*-1);
 				if(pr.getX()<0)
 					pr.setVX(pr.getVX()*-1);
